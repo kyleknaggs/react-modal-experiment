@@ -10,6 +10,11 @@ export default function Home() {
     setModalOpen(!isModalOpen);
   };
 
+  // Fired when user presses escape of clicks overlay
+  const handleRequestClose = function () {
+    setModalOpen(false);
+  };
+
   // Fix: "App element is not defined" error by binding to div at root level of app
   ReactModal.setAppElement('#___gatsby');
 
@@ -27,6 +32,7 @@ export default function Home() {
       <ReactModal
         isOpen={isModalOpen}
         style={style}
+        onRequestClose={handleRequestClose}
       >
         <button onClick={handleClick}>Close</button>
         <h2>Modal title</h2>
