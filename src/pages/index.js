@@ -8,11 +8,19 @@ export default function Home() {
     setModalOpen(!isModalOpen);
   };
 
+  const style = {
+    overlay: {
+      backgroundColor: 'red',
+      opacity: '0.5',
+    },
+  };
+
   return (
     <div>
       <button onClick={handleClick}>Open</button>
       <ReactModal
         isOpen={isModalOpen}
+        style={style}
       >
         <button onClick={handleClick}>Close</button>
         <p>Modal built using react-modal</p>
