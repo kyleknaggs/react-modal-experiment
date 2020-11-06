@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react"
+import React, { useState } from "react"
 import ReactModal from 'react-modal';
 
 export default function Home() {
@@ -9,6 +9,9 @@ export default function Home() {
   const handleClick = function () {
     setModalOpen(!isModalOpen);
   };
+
+  // Fix: "App element is not defined" error by binding to div at root level of app
+  ReactModal.setAppElement('#___gatsby');
 
   const style = {
     overlay: {
