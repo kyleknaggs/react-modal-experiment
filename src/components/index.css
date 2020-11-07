@@ -1,0 +1,9 @@
+/* Modal styles */
+/* !important required to overwrite default inline styles*/
+@media only screen and (max-width: 640px) {
+  .ReactModal__Content {
+    bottom: 0px !important;
+    left: 0px !important;
+    right: 0px !important;
+  }
+}

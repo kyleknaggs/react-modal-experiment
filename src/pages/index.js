@@ -1,5 +1,6 @@
-import React, { useState } from "react"
+import React, { useState } from "react";
 import ReactModal from 'react-modal';
+import '../components/index.css'
 
 export default function Home() {
   const [isModalOpen, setModalOpen] = useState(false);
@@ -27,6 +28,7 @@ export default function Home() {
     },
   };
 
+  // Media queries used to customize appearance on mobile devices
   const modal = (
     <div>
       <ReactModal
